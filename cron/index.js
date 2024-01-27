@@ -7,6 +7,8 @@ const axios =require("axios")
 cron.schedule('59 * * * * *',async()=>{
     let users=await Users.find()
      let server=await axios.get("https://hotel-management-server.onrender.com/test")
+     await axios.get("https://hotel-management-le7x.onrender.com/")
+
     console.log("all usrs",users.length,server.data)
  });
 
